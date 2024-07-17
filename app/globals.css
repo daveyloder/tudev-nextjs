@@ -1,0 +1,82 @@
+html,
+ body {
+   height: 100%;
+   width: 100%;
+   max-width: 100%;
+ }
+
+ header{
+  position: relative;
+  width: 100%;
+  overflow-y: hidden;
+  background-color: #621220;
+  /* background-color: #a41e35; */
+  color: white;
+  overflow: hidden;
+ }
+
+ header i {
+  color: #fff;
+ }
+
+ 
+/* Navbar defaults */
+.navbar-default.isTop {
+  background-color: white;
+  border: 0;
+}
+.navbar-default a:hover{
+  color: grey;
+}
+.navbar-default a:active{
+  color: grey;
+}
+.navbar-default.isTop a {
+  color: gray;
+}
+.navbar-brand {
+  color: white;
+}
+.navbar-brand a:hover {
+  color: grey; 
+}
+.navbar-brand a:active {
+  color: grey !important;
+}
+
+.navbar-brand a:focus {
+  color: grey !important;
+}
+
+.nav-link {
+  color: white;
+}
+
+ 
+
+ @media (min-width: 768px) {
+  
+  header {
+    padding-top: 5vh;
+  }
+ }
+
+@media (min-width: 992px){
+  
+  .navbar-default{
+    padding: 0;
+  }
+  .navbar-toggler-icon {
+    background-color: white;
+  }
+  
+}
+
+/*Laptop width minimum*/
+ @media (min-width: 1024px){
+  nav.navbar-default {
+    padding: 0;
+   }
+ }
+
+ 
