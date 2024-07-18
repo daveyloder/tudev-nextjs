@@ -218,6 +218,22 @@ export default function Home() {
               );
             })}
           </Row>
+          <Row className="text-center">
+            <Col md={12}>
+              <Link
+                className="btn btn-xl disabled"
+                style={{
+                  color: "white",
+                  backgroundColor: "#a41e35",
+                  outlineColor: "#a41e35",
+                }}
+                href="/projects"
+              >
+                {" "}
+                See All Events
+              </Link>
+            </Col>
+          </Row>
         </Container>
       </section>
       {/* Upcoming Events Section - end */}
@@ -230,7 +246,7 @@ export default function Home() {
                 <h1>
                   <i
                     className="bi bi-person-circle"
-                    style={{ color: "#621220" }}
+                    style={{ color: "#a41e35" }}
                   ></i>
                 </h1>
                 <h2>Our Officers</h2>
@@ -314,6 +330,22 @@ export default function Home() {
                 );
               }
             })}
+          </Row>
+          <Row className="text-center">
+            <Col md={12}>
+              <Link
+                className="btn btn-xl"
+                style={{
+                  color: "white",
+                  backgroundColor: "#a41e35",
+                  outlineColor: "#a41e35",
+                }}
+                href="/projects"
+              >
+                {" "}
+                Check Out More
+              </Link>
+            </Col>
           </Row>
         </Container>
       </section>

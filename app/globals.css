@@ -37,6 +37,7 @@ html,
 .navbar-default.isTop a {
   color: gray;
 }
+
 .navbar-brand {
   color: white;
 }
@@ -58,17 +59,49 @@ html,
  
 
  @media (min-width: 768px) {
+  /* .navbar-default {
+    background-color: white;
+    border: 0;
+  }
+  .navbar-default.isTop {
+    background-color: white;
+    border: 0;
+  } */
   
   header {
     padding-top: 5vh;
   }
  }
-
-@media (min-width: 992px){
-  
+ @media (min-width: 991px){
   .navbar-default{
     padding: 0;
   }
+
+  header {
+    padding-top: 5vh;
+  }
+ }
+
+@media (max-width: 991px){
+  .navbar-default {
+    background-color: white;
+    border: 0;
+  }
+  .navbar-default.isTop {
+    background-color: white;
+    border: 0;
+  }
+
+  .navbar-default a {
+    color: gray;
+  }
+
+  header {
+    padding-top: 5vh;
+  }
+  
+  
+  
   .navbar-toggler-icon {
     background-color: white;
   }
@@ -77,6 +110,7 @@ html,
 
 /*Laptop width minimum*/
  @media (min-width: 1024px){
+  
   nav.navbar-default {
     padding: 0;
    }
