@@ -177,7 +177,7 @@ export default function Home() {
           </Row>
           <Row className="text-center">
             <Col md={12}>
-              <Link className="btn btn-outline btn-xl" href="/about">
+              <Link className="btn btn-outline btn-xl disabled" href="/about">
                 {" "}
                 Find Out More
               </Link>

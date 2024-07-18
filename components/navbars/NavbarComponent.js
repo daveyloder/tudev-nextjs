@@ -25,6 +25,12 @@ function NavbarComponent() {
     },
     {
       id: 2,
+      pageName: "Events",
+      href: "#events",
+      style: { paddingTop: `15px`, paddingBottom: `15px` },
+    },
+    {
+      id: 3,
       pageName: "Projects",
       href: "#projects",
       style: { paddingTop: `15px`, paddingBottom: `15px` },
@@ -74,7 +80,7 @@ function NavbarComponent() {
       className={isScrolled ? "navbar-default isTop" : "navbar-default"}
       fixed="top"
       expand="lg"
-      // style={{ padding: 0 }}
+      light
     >
       <div className="navbar-header">
         <Link href="/" className="navbar-brand">
