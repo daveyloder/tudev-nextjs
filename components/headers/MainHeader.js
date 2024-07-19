@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "reactstrap";
+import { DISCORDLINK, OWLCONNECT } from "@/app/shared/LINKS";
 import Link from "next/link";
 
 function MainHeader() {
@@ -6,7 +7,7 @@ function MainHeader() {
     <>
       <header
         style={{
-          height: "500px",
+          height: "700px",
         }}
       >
         <video
@@ -22,7 +23,7 @@ function MainHeader() {
         <Container className="pt-5 mb-4 text-white">
           <div className="header-content">
             <Row>
-              <Col>
+              <Col sm={7}>
                 <div className="header-content-inner">
                   <h1 className="display-1">TUDev</h1>
                   <h5 className="display-5">
@@ -30,10 +31,14 @@ function MainHeader() {
                     <b>hackers &amp; makers</b>
                   </h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi magnam animi numquam quaerat aliquid tenetur, nihil
-                    provident, recusandae dolor natus delectus totam eveniet.
-                    Voluptatum, ea assumenda. Est iste consectetur asperiores!
+                    Our vibrant community of hackers and makers is dedicated to
+                    innovation, creativity, and collaboration. Whether you're a
+                    seasoned coder or a curious beginner, TUDev provides a
+                    dynamic environment to explore technology, develop new
+                    skills, and work on exciting projects. Join us to connect
+                    with like-minded peers, participate in hands-on workshops,
+                    and make your ideas a reality. At TUDev, we're not just
+                    building tech; we're building the future.
                   </p>
                 </div>
               </Col>
@@ -43,23 +48,27 @@ function MainHeader() {
               <Col>
                 <Link
                   className="btn btn-xl"
+                  target="_blank"
+                  rel="norefferer"
                   style={{
                     color: "white",
                     backgroundColor: "#a41e35",
                     outlineColor: "#a41e35",
                   }}
-                  href=""
+                  href={DISCORDLINK}
                 >
                   Join Discord <i className="bi bi-discord" />
                 </Link>{" "}
                 <Link
                   className="btn btn-xl"
+                  target="_blank"
+                  rel="norefferer"
                   style={{
                     color: "white",
                     backgroundColor: "#a41e35",
                     outlineColor: "#a41e35",
                   }}
-                  href=""
+                  href={OWLCONNECT}
                 >
                   Join The Club <i className="bi bi-people-fill" />
                 </Link>

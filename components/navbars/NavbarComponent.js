@@ -14,6 +14,7 @@ import {
   Button,
 } from "reactstrap";
 import Link from "next/link";
+import { OWLCONNECT } from "@/app/shared/LINKS";
 
 function NavbarComponent() {
   const leftNavLinks = [
@@ -41,7 +42,7 @@ function NavbarComponent() {
     {
       id: 1,
       pageName: "Join Us",
-      href: "https://temple.campuslabs.com/engage/organization/tudev",
+      href: OWLCONNECT,
       style: {
         backgroundColor: `rgba(255,255,255,.2)`,
         paddingTop: `15px`,

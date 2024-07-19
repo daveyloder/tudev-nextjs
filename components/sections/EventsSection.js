@@ -33,7 +33,7 @@ function EventsSection({ events }) {
           <Row>
             {events.map((event) => {
               return (
-                <Col key={event.id} lg={6} className="mb-4">
+                <Col key={event.id} lg={4} md={4} sm={6} className="mb-4">
                   <Card>
                     <CardImg src={event.eventImage} className="card-img-top" />
                     <CardBody>

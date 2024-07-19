@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
+import { DISCORDLINK } from "@/app/shared/LINKS";
 
 function Footer(props) {
   return (
@@ -17,7 +18,7 @@ function Footer(props) {
           <a href="" className="me-4 text-reset">
             <i className="bi bi-instagram" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href={DISCORDLINK} className="me-4 text-reset">
             <i className="bi bi-discord" />
           </a>
         </div>
