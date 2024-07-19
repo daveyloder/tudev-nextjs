@@ -37,8 +37,9 @@ function MainHeader() {
                     provides a dynamic environment to explore technology,
                     develop new skills, and work on exciting projects. Join us
                     to connect with like-minded peers, participate in hands-on
-                    workshops, and make your ideas a reality. At TUDev, we're
-                    not just building tech; we're building the future.
+                    workshops, and make your ideas a reality. At TUDev,
+                    we&apos;re not just building tech; we&apos;re building the
+                    future.
                   </p>
                 </div>
               </Col>
