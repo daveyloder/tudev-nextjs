@@ -24,17 +24,18 @@ function OfficersSection({ officers }) {
           <Row>
             {officers.map((officer, index) => {
               if (officer.officer) {
-                let className =
-                  "whoweare text-center col-md-3 col-sm-6 col-xs-6";
+                let className = "text-center col-md-6 col-sm-6 col-xs-6";
 
-                if (index === 0) {
+                {
+                  /* if (officers.length - 1 <= 2) {
                   className =
-                    "whoweare text-center col-md-offset-4 col-md-3 col-sm-6 col-xs-6";
-                }
-                if (officers.length - 1 <= 2) {
+                    "text-center col-md-offset-4 col-md-6 col-sm-6 col-xs-6";
+                } else if (index === 0) {
                   className =
-                    "whoweare text-center col-md-offset-4 col-md-6 col-sm-6 col-xs-6";
+                    "text-center col-md-offset-4 col-md-3 col-sm-6 col-xs-6";
+                } */
                 }
+
                 return (
                   <div key={officer.id} className={className}>
                     <Link
