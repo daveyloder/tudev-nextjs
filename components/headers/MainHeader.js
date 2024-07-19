@@ -32,13 +32,13 @@ function MainHeader() {
                   </h5>
                   <p>
                     Our vibrant community of hackers and makers is dedicated to
-                    innovation, creativity, and collaboration. Whether you're a
-                    seasoned coder or a curious beginner, TUDev provides a
-                    dynamic environment to explore technology, develop new
-                    skills, and work on exciting projects. Join us to connect
-                    with like-minded peers, participate in hands-on workshops,
-                    and make your ideas a reality. At TUDev, we're not just
-                    building tech; we're building the future.
+                    innovation, creativity, and collaboration. Whether you
+                    &apos;re a seasoned coder or a curious beginner, TUDev
+                    provides a dynamic environment to explore technology,
+                    develop new skills, and work on exciting projects. Join us
+                    to connect with like-minded peers, participate in hands-on
+                    workshops, and make your ideas a reality. At TUDev, we're
+                    not just building tech; we're building the future.
                   </p>
                 </div>
               </Col>
