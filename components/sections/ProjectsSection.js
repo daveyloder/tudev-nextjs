@@ -11,6 +11,8 @@ import {
 } from "reactstrap";
 import Link from "next/link";
 
+import LoadingSpinner from "@/components/LoadingSpinner";
+
 function ProjectsSection({ projects }) {
   return (
     <>
@@ -30,6 +32,7 @@ function ProjectsSection({ projects }) {
               <Col className="text-center text-white mb-4">
                 <h4>Currently No Featured Projects</h4>
                 <p>Please check back later!</p>
+                {/* <LoadingSpinner /> */}
               </Col>
             ) : (
               projects.map((project) => {
@@ -62,38 +65,6 @@ function ProjectsSection({ projects }) {
                 }
               })
             )}
-
-            {/* {projects.map((project) => {
-             
-                if (project.featuredProject) {
-                  return (
-                    <Col key={project.id} lg="4" className="mb-4">
-                      <Card
-                        style={{
-                          minHeight: "250px",
-                          height: "100%",
-                          overflow: "auto",
-                        }}
-                      >
-                        <CardBody>
-                          <CardTitle tag="h5">{project.projectTitle}</CardTitle>
-                          <CardSubtitle>
-                            By {project.projectAuthor}
-                          </CardSubtitle>
-                          <CardText>{project.projectDescription}</CardText>
-                          <Link
-                            className="btn btn-secondary"
-                            href={project.projectLink}
-                          >
-                            Project Link
-                          </Link>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  );
-                }
-              
-            })} */}
           </Row>
           <Row className="text-center">
             <Col md={12}>
