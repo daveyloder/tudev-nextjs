@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { DISCORDLINK, INSTAGRAMLINK } from "@/app/shared/LINKS";
+import { DISCORDLINK, GITHUBLINK, INSTAGRAMLINK } from "@/app/shared/LINKS";
 
 function Footer(props) {
   return (
@@ -16,6 +16,9 @@ function Footer(props) {
         <div>
           <a href={INSTAGRAMLINK} className="me-4 text-reset">
             <i className="bi bi-instagram" />
+          </a>
+          <a href={GITHUBLINK} className="me-4 text-reset">
+            <i className="bi bi-github" />
           </a>
           <a href={DISCORDLINK} className="me-4 text-reset">
             <i className="bi bi-discord" />
@@ -56,6 +59,14 @@ function Footer(props) {
               <p>
                 <Link
                   className="text-reset text-decoration-none"
+                  href="#events"
+                >
+                  Events
+                </Link>
+              </p>
+              <p>
+                <Link
+                  className="text-reset text-decoration-none"
                   href="#projects"
                 >
                   Projects
@@ -67,14 +78,25 @@ function Footer(props) {
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               {/* Links */}
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                <i className="bi bi-house-fill me-3"></i> 1801 N Broad St,
-                Philadelphia, PA 19122, USA
-              </p>
-              <p>
-                <i className="bi bi-envelope-fill me-3"></i>
-                temple.tudev@gmail.com
-              </p>
+              <Link
+                className="text-reset text-decoration-none"
+                href="https://maps.google.com/?q=1801 N Broad St,
+                  Philadelphia, PA 19122, USA"
+              >
+                <p>
+                  <i className="bi bi-house-fill me-3" /> 1801 N Broad St,
+                  Philadelphia, PA 19122, USA
+                </p>
+              </Link>
+              <Link
+                className="text-reset text-decoration-none"
+                href="mailto:temple.tudev@gmail.com"
+              >
+                <p>
+                  <i className="bi bi-envelope-fill me-3"></i>
+                  temple.tudev@gmail.com
+                </p>
+              </Link>
             </div>
           </div>
         </div>
