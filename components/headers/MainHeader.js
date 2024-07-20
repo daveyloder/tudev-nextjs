@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "reactstrap";
 import { DISCORDLINK, OWLCONNECT } from "@/app/shared/LINKS";
 import Link from "next/link";
+import Image from "next/image";
 
 function MainHeader() {
   return (
@@ -23,7 +24,7 @@ function MainHeader() {
         <Container className="pt-5 mb-4 text-white">
           <div className="header-content">
             <Row>
-              <Col sm={7}>
+              <Col md={7}>
                 <div className="header-content-inner">
                   <h1 className="display-1">TUDev</h1>
                   <h5 className="display-5">

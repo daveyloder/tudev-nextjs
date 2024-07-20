@@ -23,7 +23,7 @@ export const PROJECTS = [
     projectDescription:
       "Why you need a website, using Avata a WordPress plugin",
     projectAuthor: "Josh O'Halloran",
-    projectLink: "https://joshuaohalloran.me/",
+    projectLink: "https://joshuaohalloran.me",
     featuredProject: true,
   },
   {

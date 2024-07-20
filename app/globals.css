@@ -32,8 +32,8 @@ header .header-content .header-content-inner {
  .splash-video {
   position: absolute;
   top: -15px;
-  max-height: 100vw;
-  opacity: 0;
+  max-height: 200vw;
+  opacity: 0.3;
   min-width: 100%
   /*box-shadow: 0 0 180px 80px black inset;*/
 }
