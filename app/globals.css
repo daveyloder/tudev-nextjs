@@ -33,7 +33,7 @@ header .header-content .header-content-inner {
   position: absolute;
   top: -15px;
   max-height: 200vw;
-  opacity: 0.3;
+  opacity: 0;
   min-width: 100%
   /*box-shadow: 0 0 180px 80px black inset;*/
 }
