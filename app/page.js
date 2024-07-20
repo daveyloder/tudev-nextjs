@@ -39,7 +39,7 @@ export default function Home() {
       <EventsSection events={EVENTS} />
       {/* Upcoming Events Section - end */}
       {/* Officers Section */}
-      <OfficersSection officers={MEMBERS} />
+      <OfficersSection members={MEMBERS} />
       {/* Officers Section - end */}
       {/* Projects Section */}
       <ProjectsSection projects={PROJECTS} />

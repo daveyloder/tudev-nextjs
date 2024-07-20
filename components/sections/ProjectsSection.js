@@ -28,7 +28,7 @@ function ProjectsSection({ projects }) {
             </Col>
           </Row>
           <Row>
-            {projects.length == 0 ? (
+            {projects.length == 0 || projects == null ? (
               <Col className="text-center text-white mb-4">
                 <h4>Currently No Featured Projects</h4>
                 <p>Please check back later!</p>
