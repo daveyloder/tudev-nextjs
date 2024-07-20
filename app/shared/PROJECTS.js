@@ -14,7 +14,7 @@ export const PROJECTS = [
     projectDescription:
       "How to create gesture interface for your webcam to play Minecraft",
     projectAuthor: "Jayming Liu",
-    projectLink: "/",
+    projectLink: "",
     featuredProject: true,
   },
   {
