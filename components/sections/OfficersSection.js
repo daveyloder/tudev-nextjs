@@ -17,7 +17,7 @@ function OfficersSection({ officers }) {
                   ></i>
                 </h1>
                 <h2>Our Officers</h2>
-                <hr />
+                <br />
               </div>
             </Col>
           </Row>

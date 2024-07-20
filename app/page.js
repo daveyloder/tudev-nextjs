@@ -18,41 +18,14 @@ import Image from "next/image";
 
 import { EVENTS } from "./shared/EVENTS";
 import { MEMBERS } from "./shared/MEMBERS";
+import { PROJECTS } from "./shared/PROJECTS";
 import AboutSection from "@/components/sections/AboutSection";
 import EventsSection from "@/components/sections/EventsSection";
 import OfficersSection from "@/components/sections/OfficersSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 import MainHeader from "@/components/headers/MainHeader";
 
 export default function Home() {
-  const projects = [
-    {
-      id: 1,
-      projectTitle: "Why You Need A NAS",
-      projectDescription:
-        "A short project on why you need a home Network Accessed Server demostrated using TrueNas Scale",
-      projectAuthor: "David Loder",
-      projectLink: "",
-      featuredProject: true,
-    },
-    {
-      id: 2,
-      projectTitle: "I made a Black Hole",
-      projectDescription:
-        "How I taught myself to render a simulation of a black hole on my computer",
-      projectAuthor: "John Doe",
-      projectLink: "/",
-      featuredProject: true,
-    },
-    {
-      id: 3,
-      projectTitle: "You need a website",
-      projectDescription:
-        "Why you need a website, using Avata a WordPress plugin",
-      projectAuthor: "John Doe",
-      projectLink: "/",
-      featuredProject: true,
-    },
-  ];
   return (
     <>
       {/* Site Header */}
@@ -69,63 +42,7 @@ export default function Home() {
       <OfficersSection officers={MEMBERS} />
       {/* Officers Section - end */}
       {/* Projects Section */}
-      <section
-        id="projects"
-        className="py-5"
-        style={{ backgroundColor: "#621220" }}
-      >
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <h2 style={{ color: "white" }}>Featured Projects</h2>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <p style={{ color: "white" }}>Comming Soon!</p>
-            </Col>
-          </Row>
-          <Row>
-            {projects.map((project) => {
-              if (project.featuredProject) {
-                return (
-                  <Col key={project.id} lg="4" className="mb-4">
-                    <Card>
-                      <CardBody>
-                        <CardTitle tag="h5">{project.projectTitle}</CardTitle>
-                        <CardSubtitle>By {project.projectAuthor}</CardSubtitle>
-                        <CardText>{project.projectDescription}</CardText>
-                        <Link
-                          className="btn btn-secondary"
-                          href={project.projectLink}
-                        >
-                          Project Link
-                        </Link>
-                      </CardBody>
-                    </Card>
-                  </Col>
-                );
-              }
-            })}
-          </Row>
-          <Row className="text-center">
-            <Col md={12}>
-              <Link
-                className="btn btn-xl"
-                style={{
-                  color: "white",
-                  backgroundColor: "#a41e35",
-                  outlineColor: "#a41e35",
-                }}
-                href="/projects"
-              >
-                {" "}
-                Check Out More
-              </Link>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <ProjectsSection projects={PROJECTS} />
     </>
   );
 }

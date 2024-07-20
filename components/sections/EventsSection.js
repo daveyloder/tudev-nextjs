@@ -25,25 +25,37 @@ function EventsSection({ events }) {
               <h2 style={{ color: "white" }}>Upcoming Events</h2>
             </Col>
           </Row>
+
           <Row>
-            <Col>
-              <p style={{ color: "white" }}>Comming Soon!</p>
-            </Col>
-          </Row>
-          <Row>
-            {events.map((event) => {
-              return (
-                <Col key={event.id} lg={4} md={4} sm={6} className="mb-4">
-                  <Card>
-                    <CardImg src={event.eventImage} className="card-img-top" />
-                    <CardBody>
-                      <CardTitle tag="h5">{event.eventTitle}</CardTitle>
-                      <CardText>{event.eventDescription}</CardText>
-                    </CardBody>
-                  </Card>
-                </Col>
-              );
-            })}
+            {events.length == 0 ? (
+              <Col className="text-center text-white mb-4">
+                <h4>Currently No Events</h4>
+                <p>Please check back later!</p>
+              </Col>
+            ) : (
+              events.map((event) => {
+                return (
+                  <Col key={event.id} lg={4} md={4} sm={6} className="mb-4">
+                    <Card
+                      style={{
+                        minHeight: "250px",
+                        height: "100%",
+                        overflow: "auto",
+                      }}
+                    >
+                      <CardImg
+                        src={event.eventImage}
+                        className="card-img-top"
+                      />
+                      <CardBody>
+                        <CardTitle tag="h5">{event.eventTitle}</CardTitle>
+                        <CardText>{event.eventDescription}</CardText>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                );
+              })
+            )}
           </Row>
           <Row className="text-center">
             <Col md={12}>
