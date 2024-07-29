@@ -101,6 +101,7 @@ function ProjectsSection({ projects }) {
                             <Link
                               className="btn btn-secondary"
                               href={project.projectLink}
+                              target="_blank"
                             >
                               Project Link
                             </Link>

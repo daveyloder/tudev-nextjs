@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import nextjsLogo from "@/public/images/nextjs.svg";
 import { DISCORDLINK, GITHUBLINK, INSTAGRAMLINK } from "@/app/shared/LINKS";
+import Image from "next/image";
 
 function Footer(props) {
   return (
@@ -80,11 +82,11 @@ function Footer(props) {
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <Link
                 className="text-reset text-decoration-none"
-                href="https://maps.google.com/?q=1801 N Broad St,
+                href="https://maps.google.com/?q=1925 N 12th St,
                   Philadelphia, PA 19122, USA"
               >
                 <p>
-                  <i className="bi bi-house-fill me-3" /> 1801 N Broad St,
+                  <i className="bi bi-house-fill me-3" /> 1925 N 12th St,
                   Philadelphia, PA 19122, USA
                 </p>
               </Link>
@@ -110,6 +112,20 @@ function Footer(props) {
           &copy; {new Date().getFullYear()} Copyright:{" "}
           <a href="/" className="text-reset fw-bold text-decoration-none">
             TUDev.org
+          </a>
+        </p>
+        <p>
+          Made with{" "}
+          <a
+            href="https://nextjs.org"
+            className="text-reset fw-bold text-decoration-none"
+            target="_blank"
+          >
+            <Image
+              src={nextjsLogo}
+              className="img-fluid"
+              style={{ width: "5em" }}
+            />
           </a>
         </p>
       </div>
