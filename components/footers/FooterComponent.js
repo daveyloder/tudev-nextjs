@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import nextjsLogo from "@/public/images/nextjs.svg";
-import { DISCORDLINK, GITHUBLINK, INSTAGRAMLINK } from "@/app/shared/LINKS";
+import { SOCIALINKS } from "@/app/shared/LINKS";
 import Image from "next/image";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer className="site-footer text-center text-lg-start bg-light text-muted">
       {/* Section: Social Media  */}
@@ -16,15 +16,13 @@ function Footer(props) {
         {/* Left - end*/}
         {/* Right */}
         <div>
-          <a href={INSTAGRAMLINK} className="me-4 text-reset">
-            <i className="bi bi-instagram" />
-          </a>
-          <a href={GITHUBLINK} className="me-4 text-reset">
-            <i className="bi bi-github" />
-          </a>
-          <a href={DISCORDLINK} className="me-4 text-reset">
-            <i className="bi bi-discord" />
-          </a>
+          {SOCIALINKS.map((link) => {
+            return (
+              <a key={link.id} href={link.href} className="me-4 text-reset">
+                <i className={link.className} />
+              </a>
+            );
+          })}
         </div>
         {/* Right - end */}
       </section>
