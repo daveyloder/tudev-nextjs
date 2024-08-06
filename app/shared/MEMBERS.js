@@ -540,7 +540,7 @@ export const MEMBERS = [
     name: "David Loder",
     position: "President",
     photo:
-      "https://media.licdn.com/dms/image/C4D03AQGSN-GRtU86Rg/profile-displayphoto-shrink_400_400/0/1599928236140?e=1722470400&v=beta&t=cL00GxHI4ICOvH-VYxwg4iTUMwZ_Ys7gpNCRi_iFb8c",
+      "https://media.licdn.com/dms/image/C4D03AQGSN-GRtU86Rg/profile-displayphoto-shrink_800_800/0/1599928236140?e=1728518400&v=beta&t=1XvvT8dHZcsscOUzUv-V_2xtEIyVSjXb8nyAjeHmKw0",
     linkedIn: "https://www.linkedin.com/in/daveloder/",
     officer: true,
   },
@@ -549,7 +549,7 @@ export const MEMBERS = [
     name: "Elle Nyugen",
     position: "Vice President",
     photo:
-      "https://media.licdn.com/dms/image/D4E03AQGUWi0QJysBiA/profile-displayphoto-shrink_400_400/0/1689784752348?e=1722470400&v=beta&t=g4AydLoWapGeo5mrCLgaKnEGcx2O4b_FBqBbb5j41V8",
+      "https://media.licdn.com/dms/image/D4E03AQGUWi0QJysBiA/profile-displayphoto-shrink_800_800/0/1689784752348?e=1728518400&v=beta&t=z_K7mc2_OqGLVPiNxWw7oO80AJ0P0tdhmqsC-RZYF5k",
     linkedIn: "https://www.linkedin.com/in/elle-nguyen-124177225/",
     officer: true,
   },
