@@ -92,3 +92,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 TUDev - tudev@temple.edu
 
 Project Link: https://github.com/daveyloder/tudev-nextjs
+
+Feel free to modify any section as per your specific needs and details. If you have any additional information or sections you'd like to include, let me know!
