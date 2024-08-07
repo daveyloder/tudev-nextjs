@@ -19,24 +19,24 @@ export const OWLCONNECT =
 
 // Social Links
 export const SOCIALINKS = [
-  {
-    id: 1,
-    name: "Facebook",
-    className: `bi bi-facebook`,
-    href: " https://facebook.com/TUDev.TempleU",
-  },
+  // {
+  //   id: 1,
+  //   name: "Facebook",
+  //   className: `bi bi-facebook`,
+  //   href: " https://facebook.com/TUDev.TempleU",
+  // },
   {
     id: 2,
     name: "Instagram",
     className: "bi bi-instagram",
     href: "https://www.instagram.com/tu.dev/",
   },
-  {
-    id: 3,
-    name: "X",
-    className: "bi bi-twitter-x",
-    href: "https://x.com/templedev?lang=en",
-  },
+  // {
+  //   id: 3,
+  //   name: "X",
+  //   className: "bi bi-twitter-x",
+  //   href: "https://x.com/templedev?lang=en",
+  // },
   {
     id: 4,
     name: "Github",
