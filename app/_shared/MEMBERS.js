@@ -557,7 +557,7 @@ export const MEMBERS = [
     id: 70,
     name: "Jeffin Johnykutty",
     position: "TBD",
-    photo: "https://placehold.co/400",
+    photo: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Toby",
     linkedIn: "",
     officer: true,
   },
