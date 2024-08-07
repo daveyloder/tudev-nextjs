@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { InputGroup, Input, Button } from "reactstrap";
 
-const SearchBar = ({ placeholder, onSearch }) => {
+const SearchBar = ({ placeholder, onSearch, onChange }) => {
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event) => {

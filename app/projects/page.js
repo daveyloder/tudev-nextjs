@@ -23,13 +23,20 @@ function ProjectsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
 
+  const handleInputChange = (event) => {
+    onSearch(event.target.value);
+  };
+
   const handleSearch = (query) => {
     setSearchQuery(query);
     const filtered = PROJECTS.filter(
       (project) =>
         project.projectTitle.toLowerCase().includes(query.toLowerCase()) ||
         project.projectAuthor.toLowerCase().includes(query.toLowerCase()) ||
-        project.projectDescription.toLowerCase().includes(query.toLowerCase())
+        project.projectDescription
+          .toLowerCase()
+          .includes(query.toLowerCase()) ||
+        project.projectDate.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredProjects(filtered);
   };
@@ -85,7 +92,7 @@ function ProjectsPage() {
           </Row>
           <Row className="pt-5">
             {filteredProjects.map((project) => {
-              if (project.featuredProject) {
+              if (project) {
                 if (project.projectLink == null || project.projectLink == "") {
                   return (
                     <Col key={project.id} lg={4} md={4} sm={6} className="mb-4">
@@ -102,6 +109,7 @@ function ProjectsPage() {
                             By {project.projectAuthor}
                           </CardSubtitle>
                           <CardText>{project.projectDescription}</CardText>
+                          <CardText>Presented: {project.projectDate}</CardText>
                           <Link
                             className="btn btn-secondary disabled"
                             href={project.projectLink}
@@ -128,6 +136,7 @@ function ProjectsPage() {
                             By {project.projectAuthor}
                           </CardSubtitle>
                           <CardText>{project.projectDescription}</CardText>
+                          <CardText>Presented: {project.projectDate}</CardText>
                           <Link
                             className="btn btn-secondary"
                             href={project.projectLink}

@@ -64,6 +64,9 @@ function ProjectsSection({ projects }) {
                               By {project.projectAuthor}
                             </CardSubtitle>
                             <CardText>{project.projectDescription}</CardText>
+                            <CardText>
+                              Presented: {project.projectDate}
+                            </CardText>
                             <Link
                               className="btn btn-secondary disabled"
                               href={project.projectLink}
@@ -98,6 +101,9 @@ function ProjectsSection({ projects }) {
                               By {project.projectAuthor}
                             </CardSubtitle>
                             <CardText>{project.projectDescription}</CardText>
+                            <CardText>
+                              Presented: {project.projectDate}
+                            </CardText>
                             <Link
                               className="btn btn-secondary"
                               href={project.projectLink}
