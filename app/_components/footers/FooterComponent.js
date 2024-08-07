@@ -126,9 +126,7 @@ function Footer() {
           <a href="/" className="text-reset fw-bold text-decoration-none">
             TUDev.org
           </a>
-        </p>
-        <p>
-          Made with{" "}
+          {"     ||     "}Made with{" "}
           <a
             href="https://nextjs.org"
             className="text-reset fw-bold text-decoration-none"
@@ -139,6 +137,13 @@ function Footer() {
               className="img-fluid"
               style={{ width: "5em" }}
             />
+          </a>
+          {"     ||     "} See the GitHub for this site{" "}
+          <a
+            href="https://github.com/daveyloder/tudev-nextjs"
+            className="text-reset fw-bold text-decoration-none"
+          >
+            here
           </a>
         </p>
       </div>

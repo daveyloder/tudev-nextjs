@@ -2,20 +2,6 @@
 
 import React from "react";
 
-import {
-  Col,
-  Container,
-  Row,
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  CardImg,
-} from "reactstrap";
-import Link from "next/link";
-import Image from "next/image";
-
 import { EVENTS } from "../_shared/EVENTS";
 import { MEMBERS } from "../_shared/MEMBERS";
 import { PROJECTS } from "../_shared/PROJECTS";
