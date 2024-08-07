@@ -539,8 +539,7 @@ export const MEMBERS = [
     id: 68,
     name: "David Loder",
     position: "President",
-    photo:
-      "https://media.licdn.com/dms/image/C4D03AQGSN-GRtU86Rg/profile-displayphoto-shrink_800_800/0/1599928236140?e=1728518400&v=beta&t=1XvvT8dHZcsscOUzUv-V_2xtEIyVSjXb8nyAjeHmKw0",
+    photo: "/images/uploads/DAvidLoder.jpg",
     linkedIn: "https://www.linkedin.com/in/daveloder/",
     officer: true,
   },
@@ -548,8 +547,7 @@ export const MEMBERS = [
     id: 69,
     name: "Elle Nyugen",
     position: "Vice President",
-    photo:
-      "https://media.licdn.com/dms/image/D4E03AQGUWi0QJysBiA/profile-displayphoto-shrink_800_800/0/1689784752348?e=1728518400&v=beta&t=z_K7mc2_OqGLVPiNxWw7oO80AJ0P0tdhmqsC-RZYF5k",
+    photo: "/images/uploads/ElleNyugen.jpg",
     linkedIn: "https://www.linkedin.com/in/elle-nguyen-124177225/",
     officer: true,
   },
@@ -557,7 +555,7 @@ export const MEMBERS = [
     id: 70,
     name: "Jeffin Johnykutty",
     position: "TBD",
-    photo: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Toby",
+    photo: "/images/uploads/PhotoPicJeffinCropped.jpg",
     linkedIn: "",
     officer: true,
   },

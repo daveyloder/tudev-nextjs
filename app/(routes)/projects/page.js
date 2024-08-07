@@ -7,7 +7,6 @@ import {
   Col,
   InputGroup,
   Input,
-  Button,
   Card,
   CardBody,
   CardTitle,
@@ -17,7 +16,6 @@ import {
 } from "reactstrap";
 import Link from "next/link";
 
-import SearchBar from "@/app/_components/searchbar/SearchBar";
 import { PROJECTS } from "../../_shared/PROJECTS";
 
 function ProjectsPage() {
