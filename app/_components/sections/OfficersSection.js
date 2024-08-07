@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
+import Image from "next/image";
 
 function OfficersSection({ members }) {
   const officers = members.filter((member) => member.officer);
@@ -42,7 +43,7 @@ function OfficersSection({ members }) {
                     className="text-decoration-none"
                     target="_blank"
                   >
-                    <img
+                    <Image
                       className="img-fluid rounded"
                       style={{ width: "150px" }}
                       src={officer.photo}

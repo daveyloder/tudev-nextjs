@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import { Container, Row, Col } from "reactstrap";
+import Image from "next/image";
 
 function AboutSection() {
   return (
@@ -11,7 +12,7 @@ function AboutSection() {
           <Row>
             <Col lg={12} className="text-center">
               <div className="">
-                <img
+                <Image
                   src="/images/logo-red.png"
                   alt="TUDev logo"
                   className="img-fluid"
@@ -62,14 +63,14 @@ function AboutSection() {
               </p>
             </Col>
           </Row>
-          {/* <Row className="text-center">
+          <Row className="text-center">
             <Col md={12}>
               <Link className="btn btn-outline btn-xl disabled" href="/about">
                 {" "}
                 Find Out More
               </Link>
             </Col>
-          </Row> */}
+          </Row>
         </Container>
       </section>
     </>
