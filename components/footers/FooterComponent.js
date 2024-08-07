@@ -52,14 +52,17 @@ function Footer() {
                 </Link>
               </p>
               <p>
-                <Link className="text-reset text-decoration-none" href="#about">
+                <Link
+                  className="text-reset text-decoration-none"
+                  href="/#about"
+                >
                   About
                 </Link>
               </p>
               <p>
                 <Link
                   className="text-reset text-decoration-none"
-                  href="#events"
+                  href="/#events"
                 >
                   Events
                 </Link>
@@ -67,7 +70,7 @@ function Footer() {
               <p>
                 <Link
                   className="text-reset text-decoration-none"
-                  href="#projects"
+                  href="projects"
                 >
                   Projects
                 </Link>

@@ -18,8 +18,7 @@ function NotFoundHeader({ title, subheader, text }) {
                   <h4 className="display-4">This page is not found</h4>
                   <p>
                     You should probably click <Link href="/">here</Link> to go
-                    back to home. Do not click links on the navbar for the love
-                    of god!
+                    back to home.
                   </p>
                 </div>
               </div>
