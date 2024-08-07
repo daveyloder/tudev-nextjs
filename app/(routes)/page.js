@@ -16,14 +16,14 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-import { EVENTS } from "./_shared/EVENTS";
-import { MEMBERS } from "./_shared/MEMBERS";
-import { PROJECTS } from "./_shared/PROJECTS";
-import AboutSection from "@/components/sections/AboutSection";
-import EventsSection from "@/components/sections/EventsSection";
-import OfficersSection from "@/components/sections/OfficersSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
-import MainHeader from "@/components/headers/MainHeader";
+import { EVENTS } from "../_shared/EVENTS";
+import { MEMBERS } from "../_shared/MEMBERS";
+import { PROJECTS } from "../_shared/PROJECTS";
+import AboutSection from "@/app/_components/sections/AboutSection";
+import EventsSection from "@/app/_components/sections/EventsSection";
+import OfficersSection from "@/app/_components/sections/OfficersSection";
+import ProjectsSection from "@/app/_components/sections/ProjectsSection";
+import MainHeader from "@/app/_components/headers/MainHeader";
 
 export default function Home() {
   return (

@@ -1,10 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Inter } from "next/font/google";
-import BootstrapClient from "@/components/BootstrapClient";
+import BootstrapClient from "@/app/_components/BootstrapClient";
 import "./globals.css";
-import NavbarComponent from "@/components/navbars/NavbarComponent";
-import FooterComponent from "@/components/footers/FooterComponent";
+import NavbarComponent from "@/app/_components/navbars/NavbarComponent";
+import FooterComponent from "@/app/_components/footers/FooterComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 

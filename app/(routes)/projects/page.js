@@ -16,8 +16,8 @@ import {
 } from "reactstrap";
 import Link from "next/link";
 
-import SearchBar from "@/components/searchbar/SearchBar";
-import { PROJECTS } from "../_shared/PROJECTS";
+import SearchBar from "@/app/_components/searchbar/SearchBar";
+import { PROJECTS } from "../../_shared/PROJECTS";
 
 function ProjectsPage() {
   const [searchQuery, setSearchQuery] = useState("");

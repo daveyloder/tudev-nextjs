@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import Link from "next/link";
 
-import LoadingSpinner from "@/components/LoadingSpinner";
+import LoadingSpinner from "@/app/_components/LoadingSpinner";
 
 function ProjectsSection({ projects }) {
   return (
