@@ -14,29 +14,10 @@ import {
   Button,
 } from "reactstrap";
 import Link from "next/link";
-import { OWLCONNECT } from "@/app/_shared/LINKS";
+import { OWLCONNECT, NAVLINKS } from "@/app/_shared/LINKS";
 
 function NavbarComponent() {
-  const leftNavLinks = [
-    {
-      id: 1,
-      pageName: "About",
-      href: "/#about",
-      style: { paddingTop: `15px`, paddingBottom: `15px` },
-    },
-    {
-      id: 2,
-      pageName: "Events",
-      href: "/#events",
-      style: { paddingTop: `15px`, paddingBottom: `15px` },
-    },
-    {
-      id: 3,
-      pageName: "Projects",
-      href: "projects",
-      style: { paddingTop: `15px`, paddingBottom: `15px` },
-    },
-  ];
+  const leftNavLinks = NAVLINKS;
 
   const rightNavLinks = [
     {
@@ -99,13 +80,15 @@ function NavbarComponent() {
       {/* Left side of nav */}
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto navbar-nav">
-          {leftNavLinks.map((links) => (
-            <NavItem key={links.id}>
-              <Link className="nav-link" href={links.href}>
-                {links.pageName}
-              </Link>
-            </NavItem>
-          ))}
+          {leftNavLinks.map((link) => {
+            return (
+              <NavItem key={link.id}>
+                <Link className="nav-link" href={link.href}>
+                  {link.name}
+                </Link>
+              </NavItem>
+            );
+          })}
         </Nav>
       </Collapse>
 

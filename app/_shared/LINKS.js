@@ -1,11 +1,28 @@
+// Page Nav Links
+export const NAVLINKS = [
+  {
+    id: 1,
+    name: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    name: "About",
+    href: "/#about",
+  },
+  { id: 3, name: "Events", href: "/#events" },
+  { id: 4, name: "Projects", href: "/projects" },
+];
+// OwlConnect Link
 export const OWLCONNECT =
   "https://temple.campuslabs.com/engage/organization/tudev";
 
+// Social Links
 export const SOCIALINKS = [
   {
     id: 1,
     name: "Facebook",
-    className: "bi bi-facebook",
+    className: `bi bi-facebook`,
     href: " https://facebook.com/TUDev.TempleU",
   },
   {

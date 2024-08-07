@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import nextjsLogo from "@/public/images/nextjs.svg";
-import { SOCIALINKS } from "@/app/_shared/LINKS";
+import { NAVLINKS, SOCIALINKS } from "@/app/_shared/LINKS";
 import Image from "next/image";
 
 function Footer() {
@@ -46,7 +46,19 @@ function Footer() {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               {/* Links */}
               <h6 className="text-uppercase fw-bold mb-4">Links</h6>
-              <p>
+              {NAVLINKS.map((link) => {
+                return (
+                  <p key={link.id}>
+                    <Link
+                      className="text-reset text-decoration-none"
+                      href={link.href}
+                    >
+                      {link.name}
+                    </Link>
+                  </p>
+                );
+              })}
+              {/* <p>
                 <Link className="text-reset text-decoration-none" href="/">
                   Home
                 </Link>
@@ -74,7 +86,7 @@ function Footer() {
                 >
                   Projects
                 </Link>
-              </p>
+              </p> */}
             </div>
             {/* Grid column - 2 end */}
             {/* Grid column - 3 */}
