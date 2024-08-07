@@ -1,17 +1,12 @@
-export const DISCORDLINK = "https://discord.gg/XnccXvBKcs";
 export const OWLCONNECT =
   "https://temple.campuslabs.com/engage/organization/tudev";
-export const INSTAGRAMLINK = "https://www.instagram.com/tu.dev/";
-export const GITHUBLINK = "https://github.com/tudev";
-export const FACEBOOKLINK = "https://www.facebook.com/TUDevClub/";
-export const TWITTERLINK = "https://x.com/templedev?lang=en";
 
 export const SOCIALINKS = [
   {
     id: 1,
     name: "Facebook",
     className: "bi bi-facebook",
-    href: "https://www.facebook.com/TUDevClub/",
+    href: " https://facebook.com/TUDev.TempleU",
   },
   {
     id: 2,

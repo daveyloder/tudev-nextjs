@@ -1,9 +1,10 @@
 import { Container, Row, Col } from "reactstrap";
-import { DISCORDLINK, OWLCONNECT } from "@/app/shared/LINKS";
+import { SOCIALINKS, OWLCONNECT } from "@/app/_shared/LINKS";
 import Link from "next/link";
-import Image from "next/image";
 
 function MainHeader() {
+  const discordLink = SOCIALINKS.find((link) => link.name === "Discord");
+
   return (
     <>
       <header
@@ -57,7 +58,7 @@ function MainHeader() {
                     backgroundColor: "#a41e35",
                     outlineColor: "#a41e35",
                   }}
-                  href={DISCORDLINK}
+                  href={discordLink.href}
                 >
                   Join Discord <i className="bi bi-discord" />
                 </Link>{" "}

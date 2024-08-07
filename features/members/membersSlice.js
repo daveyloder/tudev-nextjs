@@ -1,4 +1,4 @@
-import { MEMBERS } from "@/app/shared/MEMBERS";
+import { MEMBERS } from "@/app/_shared/MEMBERS";
 
 export const selectAllMembers = () => {
   return MEMBERS;

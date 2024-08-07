@@ -1,8 +1,39 @@
-import React from "react";
+"use client";
 
-import { Container, Row, Col } from "reactstrap";
+import React, { useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  InputGroup,
+  Input,
+  Button,
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+} from "reactstrap";
+import Link from "next/link";
+
+import SearchBar from "@/components/searchbar/SearchBar";
+import { PROJECTS } from "../_shared/PROJECTS";
 
 function ProjectsPage() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    const filtered = PROJECTS.filter(
+      (project) =>
+        project.projectTitle.toLowerCase().includes(query.toLowerCase()) ||
+        project.projectAuthor.toLowerCase().includes(query.toLowerCase()) ||
+        project.projectDescription.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredProjects(filtered);
+  };
+
   return (
     <>
       {/* Site Header */}
@@ -16,15 +47,12 @@ function ProjectsPage() {
             <Col>
               <div className="header-content">
                 <div className="header-conent-inner">
-                  <h2 className="display-2">
-                    Projects <i>- *In Progress*</i>
-                  </h2>
+                  <h2 className="display-2">Projects</h2>
                   <h4 className="display-4">A showcase of member projects </h4>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sequi magnam animi numquam quaerat aliquid tenetur, nihil
-                    provident, recusandae dolor natus delectus totam eveniet.
-                    Voluptatum, ea assumenda. Est iste consectetur asperiores!
+                    On this page you will find a library of previous, and
+                    current projects of all of our members. Check them out and
+                    see what inspires you!
                   </p>
                 </div>
               </div>
@@ -44,11 +72,76 @@ function ProjectsPage() {
           </Row>
           <Row>
             <Col lg={12}>
-              <p>
-                Hey everyone, we are still working on the projects part so
-                please stay tuned!
-              </p>
+              <p>Please use the search bar to find projects</p>
             </Col>
+          </Row>
+          <Row>
+            <Col lg={8}>
+              <SearchBar
+                placeholder="Search Projects..."
+                onSearch={handleSearch}
+              />
+            </Col>
+          </Row>
+          <Row className="pt-5">
+            {filteredProjects.map((project) => {
+              if (project.featuredProject) {
+                if (project.projectLink == null || project.projectLink == "") {
+                  return (
+                    <Col key={project.id} lg={4} md={4} sm={6} className="mb-4">
+                      <Card
+                        style={{
+                          minHeight: "250px",
+                          height: "100%",
+                          overflow: "auto",
+                        }}
+                      >
+                        <CardBody>
+                          <CardTitle tag="h5">{project.projectTitle}</CardTitle>
+                          <CardSubtitle>
+                            By {project.projectAuthor}
+                          </CardSubtitle>
+                          <CardText>{project.projectDescription}</CardText>
+                          <Link
+                            className="btn btn-secondary disabled"
+                            href={project.projectLink}
+                          >
+                            No Link
+                          </Link>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  );
+                } else {
+                  return (
+                    <Col key={project.id} lg={4} md={4} sm={6} className="mb-4">
+                      <Card
+                        style={{
+                          minHeight: "250px",
+                          height: "100%",
+                          overflow: "auto",
+                        }}
+                      >
+                        <CardBody>
+                          <CardTitle tag="h5">{project.projectTitle}</CardTitle>
+                          <CardSubtitle>
+                            By {project.projectAuthor}
+                          </CardSubtitle>
+                          <CardText>{project.projectDescription}</CardText>
+                          <Link
+                            className="btn btn-secondary"
+                            href={project.projectLink}
+                            target="_blank"
+                          >
+                            Project Link
+                          </Link>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  );
+                }
+              }
+            })}
           </Row>
         </Container>
       </section>

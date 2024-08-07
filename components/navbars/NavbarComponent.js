@@ -14,26 +14,26 @@ import {
   Button,
 } from "reactstrap";
 import Link from "next/link";
-import { OWLCONNECT } from "@/app/shared/LINKS";
+import { OWLCONNECT } from "@/app/_shared/LINKS";
 
 function NavbarComponent() {
   const leftNavLinks = [
     {
       id: 1,
       pageName: "About",
-      href: "#about",
+      href: "/#about",
       style: { paddingTop: `15px`, paddingBottom: `15px` },
     },
     {
       id: 2,
       pageName: "Events",
-      href: "#events",
+      href: "/#events",
       style: { paddingTop: `15px`, paddingBottom: `15px` },
     },
     {
       id: 3,
       pageName: "Projects",
-      href: "#projects",
+      href: "projects",
       style: { paddingTop: `15px`, paddingBottom: `15px` },
     },
   ];

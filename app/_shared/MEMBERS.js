@@ -553,4 +553,12 @@ export const MEMBERS = [
     linkedIn: "https://www.linkedin.com/in/elle-nguyen-124177225/",
     officer: true,
   },
+  {
+    id: 70,
+    name: "Jeffin Johnykutty",
+    position: "TBD",
+    photo: "https://placehold.co/400",
+    linkedIn: "",
+    officer: true,
+  },
 ];

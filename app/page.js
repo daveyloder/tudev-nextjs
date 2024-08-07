@@ -16,9 +16,9 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-import { EVENTS } from "./shared/EVENTS";
-import { MEMBERS } from "./shared/MEMBERS";
-import { PROJECTS } from "./shared/PROJECTS";
+import { EVENTS } from "./_shared/EVENTS";
+import { MEMBERS } from "./_shared/MEMBERS";
+import { PROJECTS } from "./_shared/PROJECTS";
 import AboutSection from "@/components/sections/AboutSection";
 import EventsSection from "@/components/sections/EventsSection";
 import OfficersSection from "@/components/sections/OfficersSection";

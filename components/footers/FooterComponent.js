@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import nextjsLogo from "@/public/images/nextjs.svg";
-import { SOCIALINKS } from "@/app/shared/LINKS";
+import { SOCIALINKS } from "@/app/_shared/LINKS";
 import Image from "next/image";
 
 function Footer() {
