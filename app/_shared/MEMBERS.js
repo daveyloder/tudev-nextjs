@@ -3,7 +3,7 @@ export const MEMBERS = [
     id: 1,
     name: "Charles Meads",
     position: "Member",
-    photo: "https://placehold.co/400",
+    photo: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=*",
     linkedIn: "error: Illegal quoting in line 1.",
     officer: false,
   },

@@ -16,7 +16,7 @@ import {
 } from "reactstrap";
 import Link from "next/link";
 
-import { PROJECTS } from "../../_shared/PROJECTS";
+import { PROJECTS } from "../_shared/PROJECTS";
 
 function ProjectsPage() {
   const [searchQuery, setSearchQuery] = useState("");
