@@ -13,6 +13,7 @@ import {
   CardTitle,
   CardSubtitle,
   CardText,
+  InputGroupText,
 } from "reactstrap";
 import Link from "next/link";
 
@@ -67,6 +68,9 @@ function ProjectsPage() {
           <Row>
             <Col lg={8}>
               <InputGroup>
+                <InputGroupText style={{ backgroundColor: "#621220" }}>
+                  <i className="bi bi-search text-white" />
+                </InputGroupText>
                 <Input
                   placeholder="Search Projects..."
                   onChange={(event) => setSearchQuery(event.target.value)}
