@@ -21,25 +21,6 @@ import { PROJECTS } from "../../_shared/PROJECTS";
 
 function ProjectsPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProjects, setFilteredProjects] = useState(PROJECTS);
-
-  const handleInputChange = (event) => {
-    onSearch(event.target.value);
-  };
-
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-    const filtered = PROJECTS.filter(
-      (project) =>
-        project.projectTitle.toLowerCase().includes(query.toLowerCase()) ||
-        project.projectAuthor.toLowerCase().includes(query.toLowerCase()) ||
-        project.projectDescription
-          .toLowerCase()
-          .includes(query.toLowerCase()) ||
-        project.projectDate.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredProjects(filtered);
-  };
 
   return (
     <>
@@ -82,16 +63,38 @@ function ProjectsPage() {
               <p>Please use the search bar to find projects</p>
             </Col>
           </Row>
+          {/* Search bar for projects*/}
           <Row>
             <Col lg={8}>
-              <SearchBar
-                placeholder="Search Projects..."
-                onSearch={handleSearch}
-              />
+              <InputGroup>
+                <Input
+                  placeholder="Search Projects..."
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                />
+              </InputGroup>
             </Col>
           </Row>
           <Row className="pt-5">
-            {filteredProjects.map((project) => {
+            {PROJECTS.filter((project) => {
+              if (searchQuery === "") {
+                return project;
+              } else if (project) {
+                return (
+                  project.projectTitle
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase()) ||
+                  project.projectAuthor
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase()) ||
+                  project.projectDescription
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase()) ||
+                  project.projectDate
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase())
+                );
+              }
+            }).map((project) => {
               if (project) {
                 if (project.projectLink == null || project.projectLink == "") {
                   return (
