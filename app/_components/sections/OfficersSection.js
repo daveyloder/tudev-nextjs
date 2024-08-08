@@ -45,7 +45,8 @@ function OfficersSection({ members }) {
                   >
                     <Image
                       className="img-fluid rounded"
-                      style={{ width: "150px" }}
+                      width={150}
+                      height={150}
                       src={officer.photo}
                       alt="officer photo"
                     />

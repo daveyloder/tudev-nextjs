@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
@@ -10,10 +10,16 @@ import {
   CardText,
 } from "reactstrap";
 import Link from "next/link";
-
-import LoadingSpinner from "@/app/_components/LoadingSpinner";
-
 function ProjectsSection({ projects }) {
+  const [sortedProjects, setSortedProjects] = useState([]);
+
+  useEffect(() => {
+    const newSortedProjects = projects.sort(
+      (a, b) => new Date(b.projectDate) - new Date(a.projectDate)
+    );
+
+    setSortedProjects(newSortedProjects);
+  }, []);
   return (
     <>
       <section

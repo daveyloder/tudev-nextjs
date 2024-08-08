@@ -16,7 +16,8 @@ function AboutSection() {
                   src="/images/logo-red.png"
                   alt="TUDev logo"
                   className="img-fluid"
-                  style={{ width: "40px" }}
+                  width={40}
+                  height={40}
                 />
                 <br />
                 <br />
