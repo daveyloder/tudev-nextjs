@@ -10,6 +10,8 @@ import {
   CardText,
 } from "reactstrap";
 import Link from "next/link";
+
+import ProjectCard from "../cards/ProjectCard";
 function ProjectsSection({ projects }) {
   const [sortedProjects, setSortedProjects] = useState([]);
 
@@ -34,94 +36,20 @@ function ProjectsSection({ projects }) {
             </Col>
           </Row>
           <Row>
-            {projects.length == 0 || projects == null ? (
+            {sortedProjects.length == 0 || sortedProjects == null ? (
               <Col className="text-center text-white mb-4">
                 <h4>Currently No Featured Projects</h4>
                 <p>Please check back later!</p>
                 {/* <LoadingSpinner /> */}
               </Col>
             ) : (
-              projects.map((project) => {
+              sortedProjects.map((project) => {
                 if (project.featuredProject) {
-                  if (
-                    project.projectLink == null ||
-                    project.projectLink == ""
-                  ) {
-                    return (
-                      <Col
-                        key={project.id}
-                        lg={4}
-                        md={4}
-                        sm={6}
-                        className="mb-4"
-                      >
-                        <Card
-                          style={{
-                            minHeight: "250px",
-                            height: "100%",
-                            overflow: "auto",
-                          }}
-                        >
-                          <CardBody>
-                            <CardTitle tag="h5">
-                              {project.projectTitle}
-                            </CardTitle>
-                            <CardSubtitle>
-                              By {project.projectAuthor}
-                            </CardSubtitle>
-                            <CardText>{project.projectDescription}</CardText>
-                            <CardText>
-                              Presented: {project.projectDate}
-                            </CardText>
-                            <Link
-                              className="btn btn-secondary disabled"
-                              href={project.projectLink}
-                            >
-                              No Link
-                            </Link>
-                          </CardBody>
-                        </Card>
-                      </Col>
-                    );
-                  } else {
-                    return (
-                      <Col
-                        key={project.id}
-                        lg={4}
-                        md={4}
-                        sm={6}
-                        className="mb-4"
-                      >
-                        <Card
-                          style={{
-                            minHeight: "250px",
-                            height: "100%",
-                            overflow: "auto",
-                          }}
-                        >
-                          <CardBody>
-                            <CardTitle tag="h5">
-                              {project.projectTitle}
-                            </CardTitle>
-                            <CardSubtitle>
-                              By {project.projectAuthor}
-                            </CardSubtitle>
-                            <CardText>{project.projectDescription}</CardText>
-                            <CardText>
-                              Presented: {project.projectDate}
-                            </CardText>
-                            <Link
-                              className="btn btn-secondary"
-                              href={project.projectLink}
-                              target="_blank"
-                            >
-                              Project Link
-                            </Link>
-                          </CardBody>
-                        </Card>
-                      </Col>
-                    );
-                  }
+                  return (
+                    <Col key={project.id} lg={4} md={4} sm={6} className="mb-4">
+                      <ProjectCard project={project} />;
+                    </Col>
+                  );
                 }
               })
             )}
