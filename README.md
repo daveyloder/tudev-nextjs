@@ -19,7 +19,9 @@ TUDev is a student club at Temple University dedicated to fostering a community 
 
 ### Built With
 
+- [React] (https://react.dev/) - A front-end JavaScript library for building UI
 - [Next.js](https://nextjs.org/) - A React framework for production
+- [Bootstrap Icons](https://icons.getbootstrap.com/) - UI Icons
 - [Bootstrap](https://getbootstrap.com/) - UI Toolkit
 - [ReactStrap](https://reactstrap.github.io/?path=/story/home-installation--page) - a React component library for Bootstrap
 
