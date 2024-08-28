@@ -554,7 +554,7 @@ export const MEMBERS = [
   {
     id: 70,
     name: "Jeffin Johnykutty",
-    position: "TBD",
+    position: "Treasurer",
     photo: "/images/uploads/PhotoPicJeffinCropped.jpg",
     linkedIn: "",
     officer: true,
