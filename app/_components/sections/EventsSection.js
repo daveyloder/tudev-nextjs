@@ -36,22 +36,28 @@ function EventsSection({ events }) {
               events.map((event) => {
                 return (
                   <Col key={event.id} lg={4} md={4} sm={6} className="mb-4">
-                    <Card
-                      style={{
-                        minHeight: "250px",
-                        height: "100%",
-                        overflow: "auto",
-                      }}
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      href={event.eventLink}
+                      target="_blank"
                     >
-                      <CardImg
-                        src={event.eventImage}
-                        className="card-img-top"
-                      />
-                      <CardBody>
-                        <CardTitle tag="h5">{event.eventTitle}</CardTitle>
-                        <CardText>{event.eventDescription}</CardText>
-                      </CardBody>
-                    </Card>
+                      <Card
+                        style={{
+                          minHeight: "250px",
+                          height: "100%",
+                          overflow: "auto",
+                        }}
+                      >
+                        <CardBody>
+                          <CardTitle tag="h5">{event.eventTitle}</CardTitle>
+                          <CardText>{event.eventDescription}</CardText>
+                          <CardText>Location: {event.eventLocation}</CardText>
+                          <CardText>
+                            Time: {event.startTime} - {event.endTime}
+                          </CardText>
+                        </CardBody>
+                      </Card>
+                    </Link>
                   </Col>
                 );
               })
