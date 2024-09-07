@@ -10,6 +10,7 @@ import {
   CardText,
 } from "reactstrap";
 import Link from "next/link";
+import EventCard from "../cards/EventCard";
 
 function EventsSection({ events }) {
   return (
@@ -41,22 +42,7 @@ function EventsSection({ events }) {
                       href={event.eventLink}
                       target="_blank"
                     >
-                      <Card
-                        style={{
-                          minHeight: "250px",
-                          height: "100%",
-                          overflow: "auto",
-                        }}
-                      >
-                        <CardBody>
-                          <CardTitle tag="h5">{event.eventTitle}</CardTitle>
-                          <CardText>{event.eventDescription}</CardText>
-                          <CardText>Location: {event.eventLocation}</CardText>
-                          <CardText>
-                            Time: {event.startTime} - {event.endTime}
-                          </CardText>
-                        </CardBody>
-                      </Card>
+                      <EventCard event={event} />
                     </Link>
                   </Col>
                 );
