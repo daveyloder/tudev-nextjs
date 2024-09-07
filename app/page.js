@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { EVENTS } from "./_shared/EVENTS";
+import { EVENTS2 } from "./_shared/EVENTS";
 import { MEMBERS } from "./_shared/MEMBERS";
 import { PROJECTS } from "./_shared/PROJECTS";
 import AboutSection from "@/app/_components/sections/AboutSection";
@@ -22,7 +22,7 @@ export default function Home() {
       <AboutSection />
       {/* About Section - end */}
       {/* Upcoming Events Section */}
-      <EventsSection events={EVENTS} />
+      <EventsSection events={EVENTS2} />
       {/* Upcoming Events Section - end */}
       {/* Officers Section */}
       <OfficersSection members={MEMBERS} />
