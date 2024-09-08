@@ -30,9 +30,9 @@ function MemberPage() {
             <Col lg={12}></Col>
           </Row>
           <Row>
-            {MEMBERS.map((member) => {
+            {MEMBERS.map((member, index) => {
               return (
-                <Col md={4} className="mb-4">
+                <Col key={index} md={4} className="mb-4">
                   <ProfileCard member={member} />
                 </Col>
               );

@@ -97,7 +97,7 @@ const ProjectDetailPage = ({ params }) => {
                   </ul> */}
                 </CardText>
                 <Link className="btn btn-dark " href="/projects">
-                  ← Back to all posts
+                  ← Back to all projects
                 </Link>
               </CardBody>
             </Card>
