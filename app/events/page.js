@@ -17,30 +17,15 @@ import Link from "next/link";
 import EventCard from "../_components/cards/EventCard";
 
 import { EVENTS2 } from "../_shared/EVENTS";
+import SecondaryHeader from "../_components/headers/SecondaryHeader";
 
 const events = EVENTS2;
 
 function EventPage() {
   return (
     <>
-      <header
-        style={{
-          height: "400px",
-        }}
-      >
-        <Container className="pt-5 mb-4 text-white">
-          <Row>
-            <Col>
-              <div className="header-content">
-                <div className="header-conent-inner">
-                  <h2 className="display-2">Events</h2>
-                  <h4 className="display-4">What is happening </h4>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </header>
+      <SecondaryHeader title="Events" subtitle="What is happening" />
+
       <section>
         <Container className="py-5">
           {" "}
