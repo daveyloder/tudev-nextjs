@@ -2,29 +2,13 @@
 
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import SecondaryHeader from "../_components/headers/SecondaryHeader";
 
 function AboutPage() {
   return (
     <>
       {/* Site Header */}
-      <header
-        style={{
-          height: "400px",
-        }}
-      >
-        <Container className="pt-5 mb-4 text-white">
-          <Row>
-            <Col>
-              <div className="header-content">
-                <div className="header-conent-inner">
-                  <h2 className="display-2">About Us</h2>
-                  <h4 className="display-4">Who we are, and what we do </h4>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </header>
+      <SecondaryHeader title="About Us" subtitle="Who we are, and what we do" />
       <section>
         <Container>
           <Row>

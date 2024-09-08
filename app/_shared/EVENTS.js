@@ -59,7 +59,7 @@ export const EVENTS2 = [
     registrationRequired: false,
     registrationDeadline: "09-09-2024",
     maxAttendees: 15,
-    currentAttendees: 11,
+    currentAttendees: 12,
     eventLink: "https://discord.gg/mA3eBWzG?event=1281736694587985991",
   },
   // {

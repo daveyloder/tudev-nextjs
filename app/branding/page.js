@@ -2,29 +2,14 @@
 
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import SecondaryHeader from "../_components/headers/SecondaryHeader";
 
 function BrandingPage() {
   return (
     <>
       {/* Site Header */}
-      <header
-        style={{
-          height: "400px",
-        }}
-      >
-        <Container className="pt-5 mb-4 text-white">
-          <Row>
-            <Col>
-              <div className="header-content">
-                <div className="header-conent-inner">
-                  <h2 className="display-2">Our Branding</h2>
-                  <h4 className="display-4">Our Brand Guidelines </h4>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </header>
+      <SecondaryHeader title="Branding" subtitle="Our Brand Guidelines" />
+
       <section>
         <Container>
           <Row>
