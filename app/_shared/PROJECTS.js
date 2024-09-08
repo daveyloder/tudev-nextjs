@@ -313,10 +313,27 @@ export const PROJECTS = [
     projectDescription: "No Description",
     projectAuthor: "Riley Riley",
     projectLinks: [],
-    projectLink: "",
-    githubLink: "",
     featuredProject: false,
     projectDate: "Spring 2023",
     tags: [],
+  },
+  {
+    id: 25,
+    projectTitle: "TUDev Website",
+    projectAuthor: "David Loder",
+    projectImage: "/images/uploads/tudevsite.png",
+    projectDescription:
+      "This project is a website for TUDev, a student-run club at Temple University. TUDev is a community of hackers and makers, bringing together students interested in technology, coding, and creative problem-solving.",
+    projectLinks: [
+      { id: 1, name: "Website", href: "https://tudev.org" },
+      {
+        id: 2,
+        name: "Github",
+        href: "https://github.com/daveyloder/tudev-nextjs",
+      },
+    ],
+    featuredProject: false,
+    projectDate: "September 2024",
+    tags: ["ReactJs", "NextJs", "Bootstrap 5", "Reactstrap", "Netlify"],
   },
 ];

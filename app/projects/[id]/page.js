@@ -45,12 +45,22 @@ const ProjectDetailPage = ({ params }) => {
                 <CardText tag="h6" className="mb-2 text-muted">
                   By {projectAuthor} | Presented on {projectDate}
                 </CardText>
-                <img
-                  src={projectImage}
-                  width={400}
-                  height={150}
-                  className="img-fluid rounded mb-3"
-                />
+                {!projectImage ? (
+                  <img
+                    src="https://picsum.photos/400/150"
+                    width={400}
+                    height={150}
+                    className="img-fluid rounded mb-3"
+                  />
+                ) : (
+                  <img
+                    src={projectImage}
+                    width={400}
+                    height={150}
+                    className="img-fluid rounded mb-3"
+                  />
+                )}
+
                 {project.projectDescription
                   .split(`\n\n`)
                   .map((paragraph, index) => (
@@ -65,7 +75,10 @@ const ProjectDetailPage = ({ params }) => {
                     return (
                       <div key={index}>
                         <p>
-                          {link.name}: <Link href={link.href}>{link.href}</Link>
+                          {link.name}:{" "}
+                          <Link target="_blank" href={link.href}>
+                            {link.href}
+                          </Link>
                         </p>
                       </div>
                     );
