@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-} from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
 
 import ProjectCard from "../cards/ProjectCard";
@@ -46,7 +37,14 @@ function ProjectsSection({ projects }) {
               sortedProjects.map((project) => {
                 if (project.featuredProject) {
                   return (
-                    <Col key={project.id} lg={4} md={4} sm={6} className="mb-4">
+                    <Col
+                      key={project.id}
+                      lg={4}
+                      md={6}
+                      sm={12}
+                      xs={12}
+                      className="mb-4"
+                    >
                       <ProjectCard project={project} />;
                     </Col>
                   );

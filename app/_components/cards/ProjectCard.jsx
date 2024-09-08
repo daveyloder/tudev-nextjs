@@ -1,5 +1,12 @@
 import React from "react";
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Badge,
+} from "reactstrap";
 import Link from "next/link";
 
 const GitHubIcon = () => (
@@ -18,25 +25,51 @@ const GitHubIcon = () => (
   </svg>
 );
 
+function limitSentence(str, limit) {
+  const sentences = str.match(/[^.!?]+[.!?]*/g);
+
+  if (sentences) {
+    return sentences.slice(0, limit).join(" ").trim();
+  }
+
+  return str;
+}
+
 const ProjectCard = ({ project }) => {
   const {
+    id,
     projectTitle,
     projectAuthor,
     projectDescription,
     projectDate,
-    projectLink,
-    githubLink,
+    tags,
   } = project;
 
   return (
-    <Card style={{ minHeight: "250px", height: "100%", overflow: "auto" }}>
-      <CardBody>
-        <CardTitle tag="h5">{projectTitle}</CardTitle>
-        <CardSubtitle>By {projectAuthor}</CardSubtitle>
-        <CardText>{projectDescription}</CardText>
-        <CardText>Presented: {projectDate}</CardText>
-        <div className="d-flex gap-2">
-          {projectLink ? (
+    <Link style={{ textDecoration: "none" }} href={`projects/${id}`}>
+      <Card style={{ minHeight: "250px", height: "100%", overflow: "auto" }}>
+        <CardBody>
+          <CardTitle tag="h5" className="mb-2">
+            {projectTitle}
+          </CardTitle>
+          <CardSubtitle className="mb-4">
+            By {projectAuthor} | Presented on {projectDate}
+          </CardSubtitle>
+          <CardText>{limitSentence(projectDescription, 2)}</CardText>
+          <div className="d-flex gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {tags.map((tag, index) => {
+                if (tags.length === 0) {
+                  return null;
+                }
+                return (
+                  <Badge key={index} variant="secondary" className="me-1">
+                    {tag}
+                  </Badge>
+                );
+              })}
+            </div>
+            {/* {projectLink ? (
             <Link
               className="btn btn-secondary"
               href={projectLink}
@@ -57,10 +90,11 @@ const ProjectCard = ({ project }) => {
             >
               <GitHubIcon />
             </Link>
-          )}
-        </div>
-      </CardBody>
-    </Card>
+          )} */}
+          </div>
+        </CardBody>
+      </Card>
+    </Link>
   );
 };
 

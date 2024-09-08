@@ -9,7 +9,9 @@ import {
   Input,
   InputGroupText,
 } from "reactstrap";
-import ProjectCard from "./ProjectCard";
+import Link from "next/link";
+import SecondaryHeader from "../_components/headers/SecondaryHeader";
+import ProjectCard from "../_components/cards/ProjectCard";
 import { PROJECTS } from "../_shared/PROJECTS";
 
 function ProjectsPage() {
@@ -30,32 +32,21 @@ function ProjectsPage() {
       project.projectTitle.toLowerCase().includes(lowercaseQuery) ||
       project.projectAuthor.toLowerCase().includes(lowercaseQuery) ||
       project.projectDescription.toLowerCase().includes(lowercaseQuery) ||
-      project.projectDate.toLowerCase().includes(lowercaseQuery)
+      project.projectDate.toLowerCase().includes(lowercaseQuery) ||
+      project.tags.some((tag) => tag.toLowerCase().includes(lowercaseQuery))
     );
   });
 
   return (
     <>
       {/* Site Header */}
-      <header style={{ height: "400px" }}>
-        <Container className="pt-5 mb-4 text-white">
-          <Row>
-            <Col>
-              <div className="header-content">
-                <div className="header-content-inner">
-                  <h2 className="display-2">Projects</h2>
-                  <h4 className="display-4">A showcase of member projects</h4>
-                  <p>
-                    On this page you will find a library of previous and current
+      <SecondaryHeader
+        title="Projects"
+        subtitle="A showcase of member projects"
+        description="On this page you will find a library of previous and current
                     projects of all of our members. Check them out and see what
-                    inspires you!
-                  </p>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </header>
+                    inspires you!"
+      />
 
       {/* Projects Grid */}
       <section id="projects" className="py-5">
@@ -84,8 +75,20 @@ function ProjectsPage() {
 
           <Row>
             {filteredProjects.map((project) => (
-              <Col key={project.id} lg={4} md={4} sm={6} className="mb-4">
-                <ProjectCard project={project} />
+              <Col
+                key={project.id}
+                lg={4}
+                md={6}
+                sm={12}
+                xs={12}
+                className="mb-4"
+              >
+                <Link
+                  href={`/projects/${project.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <ProjectCard project={project} />
+                </Link>
               </Col>
             ))}
           </Row>

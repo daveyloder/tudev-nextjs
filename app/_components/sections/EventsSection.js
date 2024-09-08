@@ -36,7 +36,14 @@ function EventsSection({ events }) {
             ) : (
               events.map((event) => {
                 return (
-                  <Col key={event.id} lg={4} md={4} sm={6} className="mb-4">
+                  <Col
+                    key={event.id}
+                    lg={4}
+                    md={6}
+                    sm={12}
+                    xs={12}
+                    className="mb-4"
+                  >
                     <Link
                       style={{ textDecoration: "none" }}
                       href={event.eventLink}

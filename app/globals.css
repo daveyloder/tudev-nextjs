@@ -73,17 +73,31 @@ header .header-content .header-content-inner {
 .nav-link {
   color: white;
 }
-
+/* For background image on non main page headers and small screens*/
+@media (max-width: 768px){
+  header{
+    position: relative;
+    background-image: url('https://news.temple.edu/sites/news/files/styles/article_hero/public/20170731_stock_025_938x528.jpg?itok=1PTw9srE&c=ec04b0b386a8865d81daa22bcadb37d0');
+    background-size: cover;
+    background-position: "center";
+    background-color: rgba(98, 18, 32, .4);
+  }
+}
  
 
  @media (min-width: 768px) {
-  .splash-video {
+  #mainHeader .splash-video {
     position: absolute;
     top: -15px;
     max-height: 100vw;
     opacity: .3;
     /*box-shadow: 0 0 180px 80px black inset;*/
   }
+  /* header{
+    background-image: url('/images/header/20181003_Bell_Tower_Night_013a.jpg');
+    background-size: cover;
+  } */
+  
   /* .navbar-default {
     background-color: white;
     border: 0;

@@ -8,39 +8,6 @@ import {
 } from "reactstrap";
 import { Calendar, Clock, MapPin, Users } from "lucide-react";
 
-// const eventData = {
-//   eventName: "Annual Science Fair",
-//   clubName: "Science Enthusiasts Club",
-//   date: "2024-10-15",
-//   time: {
-//     start: "14:00",
-//     end: "18:00",
-//   },
-//   location: {
-//     building: "Student Center",
-//     room: "Main Hall",
-//   },
-//   description:
-//     "Join us for our annual Science Fair! Showcase your projects and learn from others.",
-//   organizers: [
-//     {
-//       name: "Jane Doe",
-//       role: "Club President",
-//       email: "jane.doe@university.edu",
-//     },
-//     {
-//       name: "John Smith",
-//       role: "Event Coordinator",
-//       email: "john.smith@university.edu",
-//     },
-//   ],
-//   categories: ["Physics", "Chemistry", "Biology", "Environmental Science"],
-//   registrationRequired: true,
-//   registrationDeadline: "2024-10-10",
-//   maxAttendees: 200,
-//   currentAttendees: 150,
-// };
-
 const EventCard = ({ event }) => {
   return (
     <Card className="w-100 mx-auto" style={{ maxWidth: "400px" }}>
