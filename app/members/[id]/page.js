@@ -22,8 +22,8 @@ const MemberProfilePage = ({ params }) => {
   const { name, position } = member;
 
   return (
-    <Container>
-      <Row>
+    <Container className="mt-5 py-5">
+      <Row className="mx-auto">
         <Col>
           <h1>{name}</h1>
           <h2>{position}</h2>
