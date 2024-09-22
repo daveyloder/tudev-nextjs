@@ -17,7 +17,7 @@ const SecondaryHeader = ({ title, subtitle, description }) => {
     zIndex: 2, // Ensures content is above the overlay
   };
   return (
-    <>
+    <div>
       {/* Site Header */}
       <header
         style={{
@@ -43,7 +43,7 @@ const SecondaryHeader = ({ title, subtitle, description }) => {
           </Row>
         </Container>
       </header>
-    </>
+    </div>
   );
 };
 

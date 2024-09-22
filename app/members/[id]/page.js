@@ -19,14 +19,17 @@ import Link from "next/link.js";
 const MemberProfilePage = ({ params }) => {
   const member = MEMBERS.find((m) => m.id.toString() === params.id);
 
-  const { name, position } = member;
+  const { name, position, email } = member;
 
   return (
     <Container className="mt-5 py-5">
       <Row className="mx-auto">
         <Col>
-          <h1>{name}</h1>
-          <h2>{position}</h2>
+          <h2>{name}</h2>
+          <p>{position}</p>
+          {email.map((email) => {
+            return <p key={email.id}>{email.email}</p>;
+          })}
         </Col>
       </Row>
     </Container>
