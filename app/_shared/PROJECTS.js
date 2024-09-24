@@ -332,8 +332,30 @@ export const PROJECTS = [
         href: "https://github.com/daveyloder/tudev-nextjs",
       },
     ],
-    featuredProject: false,
+    featuredProject: true,
     projectDate: "September 2024",
     tags: ["ReactJs", "NextJs", "Bootstrap 5", "Reactstrap", "Netlify"],
+  },
+  {
+    id: 26,
+    projectTitle: "To-Do List",
+    projectAuthor: "Nardos Moges",
+    projectImage: "https://nardosmoges.com/images/projects/to-do.jpg",
+    projectDescription: "",
+    projectLinks: [
+      {
+        id: 1,
+        name: "Website",
+        href: "https://to-do-lists-nardos.netlify.app/login",
+      },
+      {
+        id: 2,
+        name: "Github",
+        href: "https://github.com/nardosdmz/To-Do-App",
+      },
+    ],
+    featuredProject: false,
+    projectDate: "September 2024",
+    tags: ["ReactJs", "MySQL", "Bootstrap 5", "Netlify"],
   },
 ];
