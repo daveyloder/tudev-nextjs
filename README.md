@@ -40,7 +40,7 @@ Make sure you have the following installed:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/daveyloder/tudev-nextjs.git
+   git clone https://github.com/tudev/TudevOfficialWebsite.git
    ```
 2. Install Packages
    Using NPM:
@@ -93,6 +93,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 TUDev - tudev@temple.edu
 
-Project Link: https://github.com/daveyloder/tudev-nextjs
+Project Link: https://github.com/tudev/TudevOfficialWebsite
 
 Feel free to modify any section as per your specific needs and details. If you have any additional information or sections you'd like to include, let me know!
