@@ -329,7 +329,7 @@ export const PROJECTS = [
       {
         id: 2,
         name: "Github",
-        href: "https://github.com/daveyloder/tudev-nextjs",
+        href: "https://github.com/tudev/TudevOfficialWebsite",
       },
     ],
     featuredProject: true,
